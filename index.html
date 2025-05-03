@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>O&F Transport - Déménagement Professionnel</title>
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Feuille de style CSS -->
+  <link rel="stylesheet" href="style.css">
+<!-- SDK EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Vérifier que la bibliothèque est bien chargée
+    if (typeof emailjs !== "undefined") {
+      emailjs.init("P7oSU6F_wRVN7h7Br");
+    } else {
+      console.error("EmailJS n’a pas été chargé.");
+    }
+  });
+</script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">O&<span>F</span> Transport</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services"><i class="fas fa-truck-loading"></i> Services</a>
+        <a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a>
+        <a href="#devis"><i class="fas fa-clipboard-list"></i> Devis</a>
+        <a href="#localisation"><i class="fas fa-map-marker-alt"></i> Localisation</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Hero Section -->
+  <header>
+    <img src="images/hero-bg.jpg" alt="Services de déménagement professionnel">
+    <div class="header-text">
+      <h1>Déménagement Professionnel</h1>
+      <p>Service rapide, sécurisé et sur mesure pour particuliers et entreprises</p>
+      <a href="#devis" class="cta-button">Demander un devis <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Services Section -->
+    <section id="services">
+      <h2>Nos Services</h2>
+      <p>
+        Chez O&F Transport, nous vous proposons des services de déménagement complets 
+        et personnalisés pour répondre à tous vos besoins.
+      </p>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3>Déménagement Local & National</h3>
+          <p>Service de transport pour déménagements dans toute la France avec des véhicules adaptés à vos besoins.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3>Emballage Professionnel</h3>
+          <p>Protection et emballage de vos biens avec des matériaux de qualité pour garantir leur sécurité.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-dolly"></i>
+          </div>
+          <h3>Chargement & Déchargement</h3>
+          <p>Notre équipe qualifiée s'occupe de tout le processus, du chargement au déchargement de vos meubles.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Déménagement Entreprise</h3>
+          <p>Solutions adaptées pour les entreprises avec un minimum d'interruption de vos activités.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contactez-nous</h2>
+      <p>Notre équipe est disponible pour répondre à toutes vos questions et vous accompagner dans votre projet de déménagement.</p>
+      
+      <div class="contact-flex">
+        <div class="contact-methods">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-info">
+              <h3>WhatsApp</h3>
+              <a href="https://wa.me/+33628114145" target="_blank">+33 6 28 11 41 45</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-info">
+              <h3>Téléphone</h3>
+              <a href="tel:+33628114145">+33 6 28 11 41 45</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+              <h3>Email</h3>
+              <a href="mailto:bilalmoussaouistr@gmail.com">bilalmoussaouistr@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <div class="contact-info">
+              <h3>Facebook</h3>
+              <a href="https://www.facebook.com/p/OF-Transport-61554299171480/" target="_blank">O&F Transport</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devis Section -->
+    <section id="devis">
+      <h2>Demande de Devis Gratuit</h2>
+      <p>Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé pour votre déménagement.</p>
+      
+      <div class="form-container">
+        <form id="formDevis" class="form-grid">
+          <div class="form-group">
+            <label for="nom">Nom complet</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="adresse_depart">Adresse de départ</label>
+            <input type="text" id="adresse_depart" name="adresse_depart" placeholder="Adresse complète" required>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="adresse_arrivee">Adresse d'arrivée</label>
+            <input type="text" id="adresse_arrivee" name="adresse_arrivee" placeholder="Adresse complète" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="date">Date du déménagement</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="type_logement">Type de logement</label>
+            <select id="type_logement" name="type_logement">
+              <option value="studio">Studio</option>
+              <option value="t2">T2 / 2 pièces</option>
+              <option value="t3">T3 / 3 pièces</option>
+              <option value="t4">T4 / 4 pièces</option>
+              <option value="t5">T5 et plus</option>
+              <option value="maison">Maison</option>
+              <option value="bureau">Local professionnel</option>
+            </select>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="message">Informations complémentaires</label>
+            <textarea id="message" name="message" rows="4" placeholder="Précisez vos besoins spécifiques, présence d'ascenseur, piano, etc."></textarea>
+          </div>
+          
+          <div class="form-group full-width">
+            <button type="submit" id="submitButton" class="loading-button">
+              <i class="fas fa-paper-plane"></i> Envoyer ma demande
+            </button>
+          </div>
+          
+          <!-- Messages de confirmation/erreur -->
+          <div class="form-group full-width">
+            <div id="messageConfirmation" class="message-confirmation">
+              <i class="fas fa-check-circle"></i> Votre demande de devis a été envoyée avec succès ! Nous vous contacterons dans les plus brefs délais.
+            </div>
+            
+            <div id="messageErreur" class="message-erreur">
+              <i class="fas fa-exclamation-circle"></i> Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement.
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Localisation Section -->
+    <section id="localisation">
+      <h2>Notre Localisation</h2>
+      <p>Nous sommes stratégiquement situés à Noisiel pour vous servir efficacement dans toute la région parisienne et au-delà.</p>
+      
+      <div class="map-container">               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3510428247636!2d2.631056876942899!3d48.84369987133471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60f0010f823e1%3A0xd3b2e63b374c0600!2sO%26F%20transport!5e1!3m2!1sfr!2sfr!4v1714061005631!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        
+        <div class="address-overlay">
+          <h3>O&F Transport</h3>
+          <p><i class="fas fa-map-marker-alt"></i> 15 Pass. du Cid, 77186 Noisiel, France</p>
+          <a href="https://www.google.com/maps/place/O%26F+transport/@48.8436999,2.6323491,154m/data=!3m3!1e3!4b1!5s0x47e60ff8e0ceef6f:0x6b78ef9f0d3b17bf!4m6!3m5!1s0x47e60f0010f823e1:0xd3b2e63b374c0600!8m2!3d48.8436999!4d2.6335668" target="_blank" class="map-link">
+            <i class="fas fa-location-arrow"></i> Voir sur Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>À propos de nous</h3>
+          <p>O&F Transport est une entreprise de déménagement professionnelle basée à Noisiel. Nous offrons des services complets pour particuliers et entreprises avec une équipe expérimentée et dévouée.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/p/OF-Transport-61554299171480/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/+33628114145" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:bilalmoussaouistr@gmail.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Nos services</h3>
+          <ul class="footer-links">
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement local</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement national</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Service d'emballage</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement d'entreprise</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Contact rapide</h3>
+          <ul class="footer-links">
+            <li><a href="tel:+33628114145"><i class="fas fa-phone"></i> +33 6 28 11 41 45</a></li>
+            <li><a href="mailto:bilalmoussaouistr@gmail.com"><i class="fas fa-envelope"></i> bilalmoussaouistr@gmail.com</a></li>
+            <li><a href="#localisation"><i class="fas fa-map-marker-alt"></i> 15 Pass. du Cid, 77186 Noisiel</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 O&F Transport - Tous droits réservés | Déménagement professionnel en France</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>
