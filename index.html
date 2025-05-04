@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>O&F Transport - Déménagement Professionnel</title>
+  <title>O&F Transport - Livraison et Déménagement Professionnel</title>
    <!-- Favicon -->
    <link rel="icon" href="favicon.png" type="image/png">
   <!-- Polices Google Fonts -->
@@ -23,10 +23,37 @@
     if (typeof emailjs !== "undefined") {
       emailjs.init("P7oSU6F_wRVN7h7Br");
     } else {
-      console.error("EmailJS n’a pas été chargé.");
+      console.error("EmailJS n'a pas été chargé.");
     }
   });
 </script>
+<style>
+  /* Modification de la couleur du F dans le logo */
+  .logo span {
+    color: #0066cc; /* Nouvelle couleur du F */
+  }
+  
+  /* Modification de la couleur de fond du footer */
+  .footer-col:nth-child(2), .footer-col:nth-child(3) {
+    background-color: transparent; /* Fond transparent */
+    border-radius: 0;
+    padding: 15px;
+    box-shadow: none;
+  }
+  
+  .footer-col:nth-child(2) h3, .footer-col:nth-child(3) h3 {
+    color: #ffffff; /* Texte blanc pour les titres */
+  }
+  
+  .footer-links a {
+    color: #ffffff; /* Texte blanc pour les liens */
+  }
+  
+  /* Modification de la couleur des icônes sociales dans le footer */
+  .social-icons a i {
+    color: #ffffff; /* Icônes blanches */
+  }
+</style>
 </head>
 <body>
   <!-- Navigation -->
@@ -47,9 +74,9 @@
 
   <!-- Header / Hero Section -->
   <header>
-    <img src="hero-bg.jpg" alt="Services de déménagement professionnel">
+    <img src="hero-bg.jpg" alt="Services de Livraison et Déménagement Professionnel">
     <div class="header-text">
-      <h1>Déménagement Professionnel</h1>
+      <h1>Livraison et Déménagement Professionnel</h1>
       <p>Service rapide, sécurisé et sur mesure pour particuliers et entreprises</p>
       <a href="#devis" class="cta-button">Demander un devis <i class="fas fa-arrow-right"></i></a>
     </div>
@@ -60,7 +87,7 @@
     <section id="services">
       <h2>Nos Services</h2>
       <p>
-        Chez O&F Transport, nous vous proposons des services de déménagement complets 
+        Chez O&F Transport, nous vous proposons des services de livraison et déménagement complets 
         et personnalisés pour répondre à tous vos besoins.
       </p>
       
@@ -69,8 +96,48 @@
           <div class="service-icon">
             <i class="fas fa-truck"></i>
           </div>
-          <h3>Déménagement Local & National</h3>
-          <p>Service de transport pour déménagements dans toute la France avec des véhicules adaptés à vos besoins.</p>
+          <h3>Livraison</h3>
+          <p>Service de livraison rapide et fiable pour vos colis et marchandises dans toute la France.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-shopping-bag"></i>
+          </div>
+          <h3>Retrait de colis</h3>
+          <p>Nous récupérons vos achats directement dans les magasins et les livrons à l'adresse de votre choix.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>Déménagement complet</h3>
+          <p>Prise en charge intégrale de votre déménagement, du démontage à l'installation dans votre nouveau logement.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-people-carry"></i>
+          </div>
+          <h3>Aide au déménagement</h3>
+          <p>Assistance personnalisée pour vous aider dans les différentes étapes de votre déménagement.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Montage et démontage de meubles</h3>
+          <p>Service professionnel pour démonter et remonter vos meubles en toute sécurité.</p>
+        </div>
+        
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-truck-moving"></i>
+          </div>
+          <h3>Location camion avec service</h3>
+          <p>Mise à disposition d'un véhicule adapté avec chauffeur professionnel pour vos besoins de transport.</p>
         </div>
         
         <div class="service-card">
@@ -79,14 +146,6 @@
           </div>
           <h3>Emballage Professionnel</h3>
           <p>Protection et emballage de vos biens avec des matériaux de qualité pour garantir leur sécurité.</p>
-        </div>
-        
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-dolly"></i>
-          </div>
-          <h3>Chargement & Déchargement</h3>
-          <p>Notre équipe qualifiée s'occupe de tout le processus, du chargement au déchargement de vos meubles.</p>
         </div>
         
         <div class="service-card">
@@ -152,7 +211,7 @@
     <!-- Devis Section -->
     <section id="devis">
       <h2>Demande de Devis Gratuit</h2>
-      <p>Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé pour votre déménagement.</p>
+      <p>Remplissez le formulaire ci-dessous pour obtenir un devis personnalisé pour votre déménagement ou Livraison.</p>
       
       <div class="form-container">
         <form id="formDevis" class="form-grid">
@@ -166,6 +225,24 @@
             <input type="tel" id="telephone" name="telephone" placeholder="Votre numéro de téléphone" required>
           </div>
           
+          <!-- Nouvelle liste déroulante pour choisir le service -->
+          <div class="form-group full-width">
+            <label for="service">Service requis</label>
+            <select id="service" name="service" required>
+              <option value="">Choisissez un service</option>
+              <option value="livraison">Livraison</option>
+              <option value="retrait_de_colis">Retrait de colis</option>
+              <option value="demenagement_complet">Déménagement complet</option>
+              <option value="aide_au_demenagement">Aide au déménagement</option>
+              <option value="montage_et_demontage_de_meubles">Montage et démontage de meubles</option>
+              <option value="location_camion_avec_service">Location camion avec service</option>
+              <option value="emballage_professionnel">Emballage professionnel</option>
+              <option value="demenagement_entreprise">Déménagement d'entreprise</option>
+            </select>
+          </div>
+          
+          
+          
           <div class="form-group full-width">
             <label for="adresse_depart">Adresse de départ</label>
             <input type="text" id="adresse_depart" name="adresse_depart" placeholder="Adresse complète" required>
@@ -177,13 +254,15 @@
           </div>
           
           <div class="form-group">
-            <label for="date">Date du déménagement</label>
+            <label for="date">Date du service</label>
             <input type="date" id="date" name="date" required>
           </div>
           
           <div class="form-group">
-            <label for="type_logement">Type de logement</label>
+            <label for="type_logement">Type de logement/colis</label>
             <select id="type_logement" name="type_logement">
+              <option value="">Choisissez une option</option>
+              <!-- Options pour déménagement -->
               <option value="studio">Studio</option>
               <option value="t2">T2 / 2 pièces</option>
               <option value="t3">T3 / 3 pièces</option>
@@ -191,6 +270,13 @@
               <option value="t5">T5 et plus</option>
               <option value="maison">Maison</option>
               <option value="bureau">Local professionnel</option>
+              <!-- Options pour livraison/retrait -->
+              <option value="petit_colis">Petit colis</option>
+              <option value="colis_moyen">Colis moyen</option>
+              <option value="grand_colis">Grand colis</option>
+              <option value="meuble">Meuble</option>
+              <option value="electromenager">Électroménager</option>
+              <option value="autre">Autre</option>
             </select>
           </div>
           
@@ -224,9 +310,8 @@
       <h2>Notre Localisation</h2>
       <p>Nous sommes stratégiquement situés à Noisiel pour vous servir efficacement dans toute la région parisienne et au-delà.</p>
       
-      <div class="map-container">               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3510428247636!2d2.631056876942899!3d48.84369987133471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60f0010f823e1%3A0xd3b2e63b374c0600!2sO%26F%20transport!5e1!3m2!1sfr!2sfr!4v1714061005631!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.3510428247636!2d2.631056876942899!3d48.84369987133471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60f0010f823e1%3A0xd3b2e63b374c0600!2sO%26F%20transport!5e1!3m2!1sfr!2sfr!4v1714061005631!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
         <div class="address-overlay">
           <h3>O&F Transport</h3>
@@ -245,7 +330,7 @@
       <div class="footer-content">
         <div class="footer-col">
           <h3>À propos de nous</h3>
-          <p>O&F Transport est une entreprise de déménagement professionnelle basée à Noisiel. Nous offrons des services complets pour particuliers et entreprises avec une équipe expérimentée et dévouée.</p>
+          <p>O&F Transport est une entreprise de Livraison et Déménagement Professionnelle basée à Noisiel. Nous offrons des services complets pour particuliers et entreprises avec une équipe expérimentée et dévouée.</p>
           <div class="social-icons">
             <a href="https://www.facebook.com/p/OF-Transport-61554299171480/" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="https://wa.me/+33628114145" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -256,10 +341,10 @@
         <div class="footer-col">
           <h3>Nos services</h3>
           <ul class="footer-links">
-            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement local</a></li>
-            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement national</a></li>
-            <li><a href="#services"><i class="fas fa-angle-right"></i> Service d'emballage</a></li>
-            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement d'entreprise</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Livraison</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Retrait de colis</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Déménagement complet</a></li>
+            <li><a href="#services"><i class="fas fa-angle-right"></i> Montage de meubles</a></li>
           </ul>
         </div>
         
@@ -274,75 +359,45 @@
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 O&F Transport - Tous droits réservés | Déménagement professionnel en France</p>
+        <p>&copy; 2023 O&F Transport - Tous droits réservés | Livraison et Déménagement Professionnel en France</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Attendre que le DOM soit chargé
-    document.addEventListener("DOMContentLoaded", function() {
-      var formDevis = document.getElementById("formDevis");
-      var submitButton = document.getElementById("submitButton");
-      
-      if (formDevis) {
-        formDevis.addEventListener("submit", function(event) {
-          event.preventDefault();
-          
-          // Vérifier que emailjs est défini
-          if (typeof emailjs === 'undefined') {
-            document.getElementById("messageErreur").textContent = "Erreur: Service d'email non chargé. Veuillez rafraîchir la page.";
-            document.getElementById("messageErreur").style.display = "block";
-            return;
-          }
-          
-          // Masquer les messages précédents
-          document.getElementById("messageConfirmation").style.display = "none";
-          document.getElementById("messageErreur").style.display = "none";
-          
-          // Afficher l'indicateur de chargement
-          submitButton.classList.add("loading");
-          submitButton.disabled = true;
-          
-          // Préparer les données à envoyer
-          const templateParams = {
-            nom: document.getElementById("nom").value,
-            telephone: document.getElementById("telephone").value,
-            adresse_depart: document.getElementById("adresse_depart").value,
-            adresse_arrivee: document.getElementById("adresse_arrivee").value,
-            date: document.getElementById("date").value,
-            type_logement: document.getElementById("type_logement").value,
-            message: document.getElementById("message").value
-          };
-          
-          // Envoyer l'email
-          emailjs.send("service_aw5n0yr", "template_99005ln", templateParams)
-            .then(function(response) {
-              console.log("SUCCESS!", response.status, response.text);
-              document.getElementById("messageConfirmation").style.display = "block";
-              document.getElementById("formDevis").reset();
-              
-              // Faire défiler jusqu'au message de confirmation
-              document.getElementById("messageConfirmation").scrollIntoView({behavior: "smooth"});
-              
-              // Réinitialiser le bouton
-              submitButton.classList.remove("loading");
-              submitButton.disabled = false;
-            }, function(error) {
-              console.log("FAILED...", error);
-              document.getElementById("messageErreur").textContent = "Erreur lors de l'envoi: " + error.text;
-              document.getElementById("messageErreur").style.display = "block";
-              
-              // Faire défiler jusqu'au message d'erreur
-              document.getElementById("messageErreur").scrollIntoView({behavior: "smooth"});
-              
-              // Réinitialiser le bouton
-              submitButton.classList.remove("loading");
-              submitButton.disabled = false;
-            });
-        });
-      }
+   formDevis.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  // Masquer les anciens messages
+  document.getElementById("messageConfirmation").style.display = "none";
+  document.getElementById("messageErreur").style.display = "none";
+
+  // Récupération des données du formulaire
+  const formData = {
+  nom: formDevis.nom.value,
+  telephone: formDevis.telephone.value,
+  service: formDevis.service.value,
+  adresse_depart: formDevis.adresse_depart.value,
+  adresse_arrivee: formDevis.adresse_arrivee.value,
+  date: formDevis.date.value,
+  type_logement: formDevis.type_logement.value,
+  message: formDevis.message.value
+};
+
+
+
+  // Envoi via EmailJS
+  emailjs.send('service_aw5n0yr', 'template_99005ln', formData)
+    .then(function(response) {
+      console.log("Succès !", response.status, response.text);
+      document.getElementById("messageConfirmation").style.display = "block";
+      formDevis.reset(); // Réinitialise le formulaire
+    }, function(error) {
+      console.error("Erreur :", error);
+      document.getElementById("messageErreur").style.display = "block";
     });
+});
+
   </script>
 
   <!-- JavaScript principal -->
